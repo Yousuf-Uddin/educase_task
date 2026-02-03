@@ -1,0 +1,5 @@
+{
+  "name": "Educase Task",
+  "description": "A responsive React application implementing the PopX UI design with authentication flows and profile management.",
+  "requestFramePermissions": []
+}
