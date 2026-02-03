@@ -29,7 +29,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
       const newUser: User = {
         ...userData,
-        avatarUrl: userData.avatarUrl || "/assets/Ellipse 114@2x.png",
+        avatarUrl: userData.avatarUrl || "/assets/Ellipse114@2x.png",
         bio:
           userData.bio ||
           "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam",

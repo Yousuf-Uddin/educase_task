@@ -34,7 +34,7 @@ export const Profile: React.FC = () => {
           <div className="relative">
             <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-200">
               <img
-                src={user.avatarUrl}
+                src="../assets/Ellipse114@2x.png"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
