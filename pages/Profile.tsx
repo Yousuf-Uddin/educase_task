@@ -5,6 +5,7 @@ import { Layout } from '../components/Layout';
 import { Button } from '../components/Button';
 import { useAuth } from '../context/AuthContext';
 import { RoutePath } from '../types';
+import profilePic from "../assets/profile.png";
 
 
 export const Profile: React.FC = () => {
@@ -35,7 +36,7 @@ export const Profile: React.FC = () => {
           <div className="relative">
             <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-200">
               <img
-                src="/assets/profile1.jpg"
+                src={profilePic}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
