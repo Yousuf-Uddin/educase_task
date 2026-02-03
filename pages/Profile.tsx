@@ -35,7 +35,7 @@ export const Profile: React.FC = () => {
           <div className="relative">
             <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-200">
               <img
-                src="../assets/profile1.svg"
+                src="/assets/profile1.svg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
