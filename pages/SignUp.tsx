@@ -11,12 +11,12 @@ export const SignUp: React.FC = () => {
   const { signup } = useAuth();
   
   const [formData, setFormData] = useState({
-    fullName: 'Marry Doe',
-    phone: 'Marry Doe',
-    email: 'Marry Doe',
-    password: 'Marry Doe',
-    companyName: 'Marry Doe',
-    isAgency: 'yes' // 'yes' | 'no'
+    fullName: "",
+    phone: "",
+    email: "",
+    password: "",
+    companyName: "",
+    isAgency: "yes", // 'yes' | 'no'
   });
   const [error, setError] = useState('');
 
@@ -65,48 +65,49 @@ export const SignUp: React.FC = () => {
             </div>
           )}
 
-          <Input 
-            label="Full Name" 
+          <Input
+            label="Full Name"
             name="fullName"
             placeholder="Marry Doe"
             value={formData.fullName}
             onChange={handleChange}
             required
           />
-          
-          <Input 
-            label="Phone number" 
+
+          <Input
+            label="Phone number"
             name="phone"
-            placeholder="Marry Doe"
+            type="tel"
+            placeholder="4909854"
             value={formData.phone}
             onChange={handleChange}
             required
           />
-          
-          <Input 
-            label="Email address" 
+
+          <Input
+            label="Email address"
             name="email"
             type="email"
-            placeholder="Marry Doe"
+            placeholder="MarryDoe@example.com"
             value={formData.email}
             onChange={handleChange}
             required
           />
 
-          <Input 
-            label="Password" 
+          <Input
+            label="Password"
             name="password"
             type="password"
-            placeholder="Marry Doe"
+            placeholder="****"
             value={formData.password}
             onChange={handleChange}
             required
           />
 
-          <Input 
-            label="Company name" 
+          <Input
+            label="Company name"
             name="companyName"
-            placeholder="Marry Doe"
+            placeholder="MarryDoe"
             value={formData.companyName}
             onChange={handleChange}
           />
@@ -117,29 +118,37 @@ export const SignUp: React.FC = () => {
             </label>
             <div className="flex gap-6">
               <label className="flex items-center cursor-pointer gap-2">
-                <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${formData.isAgency === 'yes' ? 'border-popx-primary bg-popx-primary' : 'border-gray-400'}`}>
-                  {formData.isAgency === 'yes' && <div className="w-2 h-2 rounded-full bg-white" />}
+                <div
+                  className={`w-5 h-5 rounded-full border flex items-center justify-center ${formData.isAgency === "yes" ? "border-popx-primary bg-popx-primary" : "border-gray-400"}`}
+                >
+                  {formData.isAgency === "yes" && (
+                    <div className="w-2 h-2 rounded-full bg-white" />
+                  )}
                 </div>
-                <input 
-                  type="radio" 
-                  name="isAgency" 
-                  className="hidden" 
-                  checked={formData.isAgency === 'yes'} 
-                  onChange={() => handleRadioChange('yes')} 
+                <input
+                  type="radio"
+                  name="isAgency"
+                  className="hidden"
+                  checked={formData.isAgency === "yes"}
+                  onChange={() => handleRadioChange("yes")}
                 />
                 <span className="text-sm text-popx-text">Yes</span>
               </label>
 
               <label className="flex items-center cursor-pointer gap-2">
-                 <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${formData.isAgency === 'no' ? 'border-popx-primary bg-popx-primary' : 'border-gray-400'}`}>
-                   {formData.isAgency === 'no' && <div className="w-2 h-2 rounded-full bg-white" />}
-                 </div>
-                <input 
-                  type="radio" 
-                  name="isAgency" 
-                  className="hidden" 
-                  checked={formData.isAgency === 'no'} 
-                  onChange={() => handleRadioChange('no')} 
+                <div
+                  className={`w-5 h-5 rounded-full border flex items-center justify-center ${formData.isAgency === "no" ? "border-popx-primary bg-popx-primary" : "border-gray-400"}`}
+                >
+                  {formData.isAgency === "no" && (
+                    <div className="w-2 h-2 rounded-full bg-white" />
+                  )}
+                </div>
+                <input
+                  type="radio"
+                  name="isAgency"
+                  className="hidden"
+                  checked={formData.isAgency === "no"}
+                  onChange={() => handleRadioChange("no")}
                 />
                 <span className="text-sm text-popx-text">No</span>
               </label>

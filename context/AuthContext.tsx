@@ -29,8 +29,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
       const newUser: User = {
         ...userData,
-        avatarUrl: userData.avatarUrl || 'https://picsum.photos/200/200',
-        bio: userData.bio || 'Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam'
+        avatarUrl: userData.avatarUrl || "/assets/Ellipse 114@2x.png",
+        bio:
+          userData.bio ||
+          "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam",
       };
 
       // Save to users list
